@@ -5,6 +5,23 @@
     <title>Airplane Dashboard</title>
 </head>
 <body>
+    <h2>Aici sunt in Dashboard View</h2>
+
+    {{#airplanes}}
+    <p>Airplane: {{name}}; Age: {{age}} <a href="/myapp/airplane/info/{{id}}">Detalii</a></p>
+    {{/airplanes}}
+
+    <form action="/myapp/airplane/add" method="post" name="airplane">
+        <fieldset>
+            <legend>Personal info</legend>
+
+        Name: <input type="text" name="name" />
+        <br><br>
+        Age: <input type="number" name="age" />
+        <br><br>
+        <button type="submit">Save</button>
+        </fieldset>
+    </form>
 
 </body>
 </html>
