@@ -1,0 +1,58 @@
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>titlu</title>
+</head>
+<body>
+    <h1>Rezultat: {{result}}</h1>
+    <div>
+        <p>text</p>
+        <p>{{firstStudent}}</p>
+    </div>
+    {{#ploua}}
+    <div>
+        <p>Nu se uda florile!</p>
+        <p>Penru ca ploua...</p>
+    </div>
+    {{/ploua}}
+    <div>
+        {{names}}
+    </div>
+    <ul>
+        {{#names}}
+        <li>-----------</li>
+        <li>{{.}}</li>
+        {{/names}}
+    </ul>
+    {{#numbers}}
+    <div style="border:1px solid green; width:100px; border-radius:50px; padding: 15px">
+        {{.}}
+    </div>
+    {{/numbers}}
+
+    <div>
+        <h3>Toti studentii</h3>
+        {{#studenti}}
+        <p>{{name}}: {{age}} ani si abtinut urmatoarele note:</p>
+        <ul>
+            {{#marks}}
+            <li>{{.}}</li>
+            {{/marks}}
+        </ul>
+        {{/studenti}}
+    </div>
+
+    <div>
+        <h3>Studentii peste 21</h3>
+        {{#oldStudenti}}
+        <p>{{name}}: {{age}} ani si abtinut urmatoarele note:</p>
+        <ul>
+            {{#marks}}
+            <li>{{.}}</li>
+            {{/marks}}
+        </ul>
+        {{/oldStudenti}}
+    </div>
+
+</body>
+</html>
